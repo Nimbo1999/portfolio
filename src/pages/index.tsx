@@ -1,7 +1,13 @@
 import Head from 'next/head'
 
 export default function Home() {
-  return (
-    <div>Hello Word!</div>
-  )
+	return (
+		<>
+			<Head>
+				<title>Matheus's portfolio</title>	
+			</Head>
+
+			<div>Hello Word!</div>
+		</>
+	)
 }
