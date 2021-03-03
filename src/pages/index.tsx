@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router';
-import { useIntl } from 'react-intl';
+
+import { useTranslation } from '../utils/useTranslations';
 
 export default function Home() {
 	const { locale, locales, defaultLocale } = useRouter();
-	const { formatMessage } = useIntl();
+	const { t } = useTranslation();
 
 	return (
 		<>
@@ -13,8 +14,8 @@ export default function Home() {
 			</Head>
 
 			<div>
-				<h2>{formatMessage({ id: 'hello' })}</h2>
-				<p>{formatMessage({ id: 'welcomeMessage' })}</p>
+				<h2>{ t('hello') }</h2>
+				<p>{ t('welcomeMessage') }</p>
 				<br />
 				<p>Current locale: {locale}</p>
 				<p>Default locale: {defaultLocale}</p>
