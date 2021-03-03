@@ -1,26 +1,51 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router';
+import styled from 'styled-components';
+
+import Header from '../components/header';
 
 import { useTranslation } from '../utils/useTranslations';
 
+const HomepageWrapper = styled.div`
+	
+`;
+
+const ImageTop = styled.img`
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: -1;
+`;
+
+const ImageBottom = styled.img`
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	transform: rotate(180deg);
+	z-index: -1;
+`;
+
 export default function Home() {
-	const { locale, locales, defaultLocale } = useRouter();
 	const { t } = useTranslation();
 
 	return (
 		<>
 			<Head>
-				<title>Matheus's portfolio</title>	
+				<title>{ t('headTitle') }</title>	
 			</Head>
 
-			<div>
-				<h2>{ t('hello') }</h2>
-				<p>{ t('welcomeMessage') }</p>
-				<br />
-				<p>Current locale: {locale}</p>
-				<p>Default locale: {defaultLocale}</p>
-				<p>Configured locales: {locales.join(', ')}</p>
-			</div>
+			<HomepageWrapper>
+				<ImageTop
+					src="/img/misc/mobile-bg.svg"
+					alt="background rect"
+				/>
+				<ImageBottom
+					src="/img/misc/mobile-bg.svg"
+					alt="background rect"
+				/>
+
+				<Header />
+
+			</HomepageWrapper>
 		</>
 	)
 }
