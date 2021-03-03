@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
-        color: inherit;
+        color: ${({theme}) => theme.pallet.link};
         text-decoration: none;
     }
 `;

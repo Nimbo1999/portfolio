@@ -5,12 +5,9 @@ declare module 'styled-components' {
         pallet: {
             white:  string,
             background:  string,
-            text:  string,
-            textHighlight:  string,
             title:  string,
-            red: string,
-            green:  string,
-            blue:  string,
+            text:  string,
+            link:  string,
         },
     
         breakpoint: {

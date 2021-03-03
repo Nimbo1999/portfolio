@@ -5,13 +5,10 @@ const BASE_UNIT = 8;
 const theme:DefaultTheme = {
     pallet: {
         white: '#FFFFFF',
-        background: '#F2F3F5',
-        text: '#666666',
-        textHighlight: '#B3B9FF',
-        title: '#2E384D',
-        red: '#E83F5B',
-        green: '#4CD62B',
-        blue: '#5965E0',
+        background: '#FAFAFA',
+        title: '#3F3F3F',
+        text: '#616161',
+        link: '#3EA9F5',
     },
     
     breakpoint: {
