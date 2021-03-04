@@ -6,7 +6,8 @@ import Header from '../components/header';
 import { useTranslation } from '../utils/useTranslations';
 
 const HomepageWrapper = styled.div`
-	
+	height: 100%;
+	position: relative;
 `;
 
 const ImageTop = styled.img`

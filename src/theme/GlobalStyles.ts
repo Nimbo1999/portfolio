@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${({ theme }) => theme.pallet.background};
         color: ${({ theme }) => theme.pallet.text};
+        font-family: 'Roboto', sans-serif;
     }
 
     button {
