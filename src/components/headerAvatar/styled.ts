@@ -32,8 +32,8 @@ const KBTextContent = styled.div<KBTextContentI>`
     ` }
     bottom: 0;
 
-    width: 112px;
-    height: 112px;
+    width: 120px;
+    height: 120px;
     background: ${({ bgColor, theme }) => bgColor ? bgColor : theme.pallet.white };
     border-radius: 50%;
 
