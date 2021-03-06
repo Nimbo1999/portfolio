@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import { MutableRefObject, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import CardComponent from '../components/card';
 
 import Header from '../components/header';
 
@@ -25,8 +27,42 @@ const ImageBottom = styled.img`
 	z-index: -1;
 `;
 
+const MainContent = styled.main`
+	padding: ${({theme}) => theme.spacing(4)} 0px;
+`;
+
+const RelativeContent = styled.div<{ height: number }>`
+	position: relative;
+	height: ${({ height }) => `${height}px`};
+`;
+
+const FloatingContent = styled.div`
+	position: absolute;
+
+	left: ${({theme}) => `-${theme.spacing(1)}`};
+`;
+
 export default function Home() {
 	const { t } = useTranslation();
+
+	const floatingRef = useRef<HTMLDivElement>(null);
+
+	const [ floatingElementHeight, setFloatingElementHeight ] = useState<number>(0);
+
+	function getFloatingRefHeight(divElement: HTMLDivElement):number {
+
+		const { clientHeight } = divElement;
+
+		return clientHeight;
+	}
+
+	useEffect(() => {
+		const { current } = floatingRef;
+		if (current) {
+			setFloatingElementHeight(getFloatingRefHeight(current));
+		}
+
+	}, [floatingRef.current]);
 
 	return (
 		<>
@@ -45,6 +81,18 @@ export default function Home() {
 				/>
 
 				<Header />
+
+				<MainContent>
+
+					<RelativeContent height={ floatingElementHeight }>
+						<FloatingContent ref={ floatingRef } >
+
+							<CardComponent />
+
+						</FloatingContent>
+					</RelativeContent>
+
+				</MainContent>
 
 			</HomepageWrapper>
 		</>
