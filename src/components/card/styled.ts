@@ -14,12 +14,6 @@ const Title = styled.h2`
     text-transform: uppercase;
 `;
 
-const CardParagraph = styled.p`
-    font-size: 1rem;
-    margin-bottom: ${({theme}) => theme.spacing(2)};
-    font-weight: 400;
-`;
-
 const CardFooter = styled.footer`
     display: flex;
     justify-content: space-between;
@@ -27,5 +21,5 @@ const CardFooter = styled.footer`
 `;
 
 export {
-    CardWrapper, Title, CardParagraph, CardFooter
+    CardWrapper, Title, CardFooter
 };

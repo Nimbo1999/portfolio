@@ -1,4 +1,4 @@
-import { CardWrapper, Title, CardParagraph, CardFooter } from './styled';
+import { CardWrapper, Title, CardFooter } from './styled';
 import { useTranslation } from '../../utils/useTranslations';
 
 interface CardComponentProps {
@@ -12,11 +12,12 @@ function CardComponent({}: CardComponentProps) {
 
             <Title>{ t('resume_information_cart_title') }</Title>
 
-            <CardParagraph>{ t('resume_information_cart_paragraph_1') }</CardParagraph>
+            <p>{ t('resume_information_cart_paragraph_1') }</p>
 
-            <CardParagraph>{ t('resume_information_cart_paragraph_2') }</CardParagraph>
+            <p>{ t('resume_information_cart_paragraph_2') }</p>
 
             <CardFooter>
+
                 <a href="https://www.instagram.com/matheus.kns/" rel="noopener noreferrer" target="_blank" aria-label="Instagram profile">
                     <img src="/img/icons/instagram.svg" alt="Instagram profile" title="Instagram profile" />
                 </a>

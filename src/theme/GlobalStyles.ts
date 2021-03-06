@@ -31,6 +31,13 @@ const GlobalStyle = createGlobalStyle`
         color: ${({theme}) => theme.pallet.link};
         text-decoration: none;
     }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: ${({theme}) => theme.spacing(2)};
+        color: ${({theme}) => theme.pallet.text};
+    }
 `;
 
 export default GlobalStyle;
