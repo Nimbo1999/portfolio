@@ -1,36 +1,36 @@
 import { CardWrapper, Title, CardParagraph, CardFooter } from './styled';
+import { useTranslation } from '../../utils/useTranslations';
 
-function CardComponent() {
+interface CardComponentProps {
+}
+
+function CardComponent({}: CardComponentProps) {
+    const { t } = useTranslation();
+
     return (
         <CardWrapper>
 
-            <Title>Hello you!</Title>
+            <Title>{ t('resume_information_cart_title') }</Title>
 
-            <CardParagraph>
-                My name is Matheus, I’m from Brazil and super engaged with software industry.
-                I’ve started my studies in this area with 17 years old, Today I am Graduated in
-                Analysis and systems development and working as ReactJS, RN, developer, UI/UX at AGSOFT.
-            </CardParagraph>
+            <CardParagraph>{ t('resume_information_cart_paragraph_1') }</CardParagraph>
 
-            <CardParagraph>
-                If you want to know me more, contact me in my linkedin area or in one of my social medias.
-            </CardParagraph>
+            <CardParagraph>{ t('resume_information_cart_paragraph_2') }</CardParagraph>
 
             <CardFooter>
-                <a href="https://www.instagram.com/matheus.kns/" rel="noopener noreferrer" target="_blank">
-                    <img src="/img/icons/instagram.svg" alt="Instagram profile" />
+                <a href="https://www.instagram.com/matheus.kns/" rel="noopener noreferrer" target="_blank" aria-label="Instagram profile">
+                    <img src="/img/icons/instagram.svg" alt="Instagram profile" title="Instagram profile" />
                 </a>
 
-                <a href="https://www.facebook.com/MatheusNimbo" rel="noopener noreferrer" target="_blank">
-                    <img src="/img/icons/facebook.svg" alt="Facebook profile" />
+                <a href="https://www.facebook.com/MatheusNimbo" rel="noopener noreferrer" target="_blank" aria-label="Facebook profile">
+                    <img src="/img/icons/facebook.svg" alt="Facebook profile" title="Facebook profile" />
                 </a>
 
-                <a href="https://github.com/Nimbo1999" rel="noopener noreferrer" target="_blank">
-                    <img src="/img/icons/github.svg" alt="GitHub profile" />
+                <a href="https://github.com/Nimbo1999" rel="noopener noreferrer" target="_blank" aria-label="GitHub profile">
+                    <img src="/img/icons/github.svg" alt="GitHub profile" title="GitHub profile" />
                 </a>
 
-                <a href="https://www.linkedin.com/in/matheuslopes1999/" rel="noopener noreferrer" target="_blank">
-                    <img src="/img/icons/linkedin.svg" alt="Linkedin profile" />
+                <a href="https://www.linkedin.com/in/matheuslopes1999/" rel="noopener noreferrer" target="_blank" aria-label="Linkedin profile">
+                    <img src="/img/icons/linkedin.svg" alt="Linkedin profile" title="Linkedin profile" />
                 </a>
 
             </CardFooter>
