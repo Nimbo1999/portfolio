@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import CardComponent from '../components/card';
+import SingleProject from '../components/single-project';
 
 import Header from '../components/header';
 
@@ -91,6 +92,12 @@ export default function Home() {
 
 						</FloatingContent>
 					</RelativeContent>
+
+					<section>
+						<h2>Last Project</h2>
+
+						<SingleProject />
+					</section>
 
 				</MainContent>
 

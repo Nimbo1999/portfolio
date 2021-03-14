@@ -2,7 +2,7 @@ import {
     HeaderWrapper, NavItem, NavBar, AvatarSectionWrapper
 } from './styled';
 
-import HeaderAvatar from '../headerAvatar';
+import HeaderAvatar from '../header-avatar';
 
 import { useTranslation } from '../../utils/useTranslations';
 
